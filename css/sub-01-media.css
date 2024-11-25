@@ -270,7 +270,7 @@
     transform: translate(20rem, -10rem);
   }
 
-  .s1_right{overflow: unset;}
+  #s1 .s1_right{overflow: unset;}
 
   .box_headt {
     width: 12rem;
