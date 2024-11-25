@@ -266,9 +266,11 @@
     font-weight: 800;
   }
   .dt_img {
-    width: 40rem;
+    width: 35rem;
     transform: translate(20rem, -10rem);
   }
+
+  .s1_right{overflow: unset;}
 
   .box_headt {
     width: 12rem;
