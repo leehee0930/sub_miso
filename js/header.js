@@ -15,18 +15,33 @@ $(document).ready(function(){
     });
   });
 
-  //Mobile Navigation_____________
   $(window).on("scroll",function(){
     let scroll = $(this).scrollTop();
+    let wB = $(window).innerWidth();
     // console.log(scroll);
 
-    if(scroll >200){
-      BODY.addClass("scrolling");
-      scrollTopBtn.addClass("On")
-    }else{
-      BODY.removeClass("scrolling");
-      scrollTopBtn.removeClass("On");
-    };
+    if (scroll > 300) {
+      scrollTopBtn.addClass('On');
+    } else {
+      scrollTopBtn.removeClass('On');
+    }
+    
+    if (scroll > 300 && wB > 1280) {
+      scrollTopBtn.addClass('On');
+      $('.header_left .nav').css({ display: 'none' });
+      $('.header_left img').css({ display: 'none' });
+    } if(scroll < 300 && wB > 1280) {
+      scrollTopBtn.removeClass('On');
+      $('.header_left .nav').css({ display: 'inline-block' });
+      $('.header_left img').css({ display: 'inline-block' });
+    }
+
+    if (scroll > 900 && wB >1280) {
+      BODY.addClass('scrolling');
+      $('.header_left img').css({ display: 'inline-block' });
+    } else {
+      BODY.removeClass('scrolling');
+    }
   });
 
   //Desktop Navigation_____________
@@ -34,15 +49,6 @@ $(document).ready(function(){
     $(this).find(".sub_menu").stop().slideDown();
   },function(){
     $(this).find(".sub_menu").stop().slideUp();
-  });
-
-  $(window).on("load resize", function(){
-    let w = $(window).innerWidth();
-
-    if(w < 1300){
-      BODY.removeClass("mOpen")
-      $(".subNav").removeAttr("style");
-    }
   });
 
 });

@@ -1,71 +1,34 @@
-body{color: #333;}
 section{
+  width: 100%;
+  height: max-content;
   padding: 2rem;
   margin: 10rem auto;
   z-index: -1;
+  overflow: hidden;
 }
-.goto-top{
-  position: fixed;
-  bottom: 7rem;
-  right: 2.5rem;
-  text-align: center;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-  z-index: 10;
-}
-.goto-top>i{
-  font-size: 2.2rem;
-  background-color: #fff;
-  border-radius: 2rem;
-  padding: 1.6rem 1.3rem;
-  box-shadow: 0 0 0.4rem rgba(0,0,0,0.4);
-  cursor: pointer;
-}
-.goto-top>a{
-  position: relative;
-  display: block;
-  width: 6.5rem;
-  height: 6.5rem;
-  background: url(../image/icon-down.png) no-repeat center var(--mainColor);
-  border-radius: 50%;
-  padding: 1.3rem;
-  margin-top: 1rem;
-  box-shadow: 0 0 0.4rem rgba(0,0,0,0.4);
-}
-.goto-top>p{
-  position: absolute;
-  right: 107%;
-  bottom: 1rem;
-  background-color: rgba(0,0,0,0.6);
-  color: #fff;
-  font-size: 1.2rem;
-  width: max-content;
-  padding: 1rem;
-  border-radius: 3rem;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-}
-.goto-top>a:hover + p{opacity: 1;}
-.goto-top.On{opacity: 1;}
 
 main{
-  height: 50rem;
+  height: 60rem;
   width: 100%;
 }
 main .main_tit{
   position: absolute;
-  top: 40%;
+  top: 45%;
   width: 100%;
   text-align: center;
   font-size: 3rem;
+  font-weight: 500;
 }
 main .main_text p:first-child{
-  font-size: 2.3rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
 }
 main .main_text .text{
-  font-size: 3.3rem;
-  font-weight: 700;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #0036ac;
+}
+main .main_text p:nth-child(3){
+  font-size: 2.4rem;
 }
 main .main_images{display: none;}
 main .moMain_images{
@@ -73,35 +36,43 @@ main .moMain_images{
   top: 6.3rem;
   left: 0;
   width: 100%;
+  height: 100%;
 }
-main .moMain_images img{width: 100%;}
+main .moMain_images img{
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
 main .moMain_images img:nth-child(1){
   display: none;
 }
 main .main_text > *{opacity: 0;}
 
-#section01 .text_left{font-size: 2.5rem;}
-#section01 .text_left b{font-size: 3rem;}
+#section01 .text_left{font-size: 2rem;}
+#section01 .text_left b{font-size: 2.8rem;}
 #section01 .text_right{
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: right;
 }
-#section01 .text_right b{font-size: 4.5rem;}
+#section01 .text_right b{font-size: 4rem;}
 #section01 .content{
   display: flex;
   justify-content: center;
-  column-gap: 4rem;
+  flex-direction: column;
+  row-gap: 2rem;
   margin-top: 6rem;
 }
 #section01 .content .caption{
   position: relative;
   min-width: 21rem;
   border-radius: 1.5rem;
-  height: 30rem;
-  padding: 5rem 2rem;
+  width: 100%;
+  height: 22rem;
+  padding: 2rem 2rem;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 2.3rem;
+  overflow: hidden;
 }
 #section01 .content .caption p{
   font-size: 2rem;
@@ -109,29 +80,29 @@ main .main_text > *{opacity: 0;}
   margin: 1rem 0 2rem;
   line-height: 2.6rem;
 }
-#section01 .content .cap1{background-color: var(--subColor);}
+#section01 .content .cap1{
+  margin-left: -0.5rem;
+  background-color: var(--subColor);
+}
 #section01 .content .cap2{
   background-color: var(--mainColor);
   color: #fff;
-  margin-top: 8rem;
+  margin-left: 0.5rem;
 }
 #section01 .content .cap1:after,
 #section01 .content .cap2:after{
   content: '';
   position: absolute;
-  width: 11rem;
-  height: 16rem;
+  width: 45%;
+  height: 90%;
+  bottom: 0;
+  right: 0;
 }
 #section01 .content .cap1:after{
-  background: url(../image/section01_1.png) no-repeat center/cover;
-  right: 0;
-  bottom: -7rem;
+  background: url(../image/section01_3.png) no-repeat center/contain;
 }
 #section01 .content .cap2:after{
-  background: url(../image/section01_2.png) no-repeat right/contain;
-  right: 0;
-  bottom: 80%;
-  width: 16rem;
+  background: url(../image/section01_4.png) no-repeat center/contain;
 }
 #section01 .btn{
   width: max-content;
@@ -147,7 +118,6 @@ main .main_text > *{opacity: 0;}
   border: 0.1rem solid #D6E3FF;
   font-weight: 600;
 }
-
 #section01 .cap1,
 #section01 .cap2{
   opacity: 0;
@@ -155,22 +125,24 @@ main .main_text > *{opacity: 0;}
 
 #section02{
   padding: 0;
-  height: 95vh;
+  height: 95rem;
 }
 #section02 .s2_content{
   display: none;
   width: 100%;
-  height: inherit;
+  height: 95rem;
 }
 #section02 .s2_content.active{display: block;}
 #section02 .images img{
   position: absolute;
   width: 100%;
-  height: 95%;
+  height: 95rem;
   object-fit: cover;
   display: none;
 }
 #section02 .s2_content .rel{
+  width: 100%;
+  height: 95rem;
   background: rgba(0,0,0,0.5);
   padding: 2rem;
 }
@@ -185,16 +157,16 @@ main .main_text > *{opacity: 0;}
 #section02 .menu_btn p.active{color: var(--subColor);}
 #section02 .s2_tit{
   position: relative;
-  width: 15rem;
-  height: 15rem;
+  width: 13rem;
+  height: 13rem;
   background: url(../image/icon.png) no-repeat center/cover;
-  margin-top: -3rem;
+  margin-top: -8rem;
 }
 #section02 .s2_tit>span{
   position: absolute;
   top: 40%;
-  right: -20%;
-  font-size: 3rem;
+  right: -22%;
+  font-size: 2.8rem;
   color: #fff;
   font-weight: 700;
 }
@@ -207,41 +179,46 @@ main .main_text > *{opacity: 0;}
   padding: 0 1.5rem 0 1rem;
   background-color: #fff;
   border-radius: 1.3rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 500;
   margin: 2rem 3rem;
 }
 #section02 div[class*=key] img{
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
 }
 #section02 .content{
   position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
+  right: 50%;
+  bottom: 10%;
+  transform: translateX(50%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 95%;
+  height: 30%;
 }
 #section02 .caption{
   border: .1rem solid #fff;
   border-radius: .5rem;
-  padding: 2.5rem 3rem;
-  margin: 2rem;
+  padding: 4%;
+  flex: 1;
   color: #fff;
   transition: 0.3s;
 }
 #section02 .caption h3{
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 #section02 .caption p{
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
-#section02 .caption span{font-size: 1.8rem;}
+#section02 .caption span{font-size: 1.5rem;}
 #section02 .caption .s2_btn{
   background-color: var(--mainColor);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: .5rem 1rem;
   border-radius: 0.5rem;
   float: right;
@@ -259,18 +236,19 @@ main .main_text > *{opacity: 0;}
 #section02 .s2_content .main_image img{
   position: absolute;
   width: 100%;
-  height: 95%;
+  height: 95rem;
   object-fit: cover;
 }
 #section02 #capTab2 .s2_tit{
   background: none;
   position: relative;
+  margin-bottom: 2rem;
 }
 #section02 #capTab2 .s2_tit:before{
   content: '';
   position: absolute;
-  width: 8rem;
-  height: 8rem;
+  width: 7rem;
+  height: 7rem;
   right: -40%;
   top: 1rem;
   background: url(../image/logo-2.png) no-repeat center/cover;
@@ -278,7 +256,7 @@ main .main_text > *{opacity: 0;}
 #section02 .cards{
   position: relative;
   width: 95%;
-  height: 50%;
+  height: 40%;
   margin: auto;
 }
 #section02 .cards div[class*=card]{
@@ -335,6 +313,7 @@ main .main_text > *{opacity: 0;}
   width: max-content;
   opacity: 0;
   transition: 0.35s;
+  z-index: 2;
 }
 #section02 .card3 .item,
 #section02 .card4 .item{
@@ -347,17 +326,18 @@ main .main_text > *{opacity: 0;}
   position: absolute;
   bottom: 5%;
   right: 4%;
-  font-size: 3rem;
+  font-size: 2.3rem;
   color: #fff;
   text-align: right;
 }
-#section02 .s2_text b{font-size: 3.3rem;}
+#section02 .s2_text>div{pointer-events: none;}
+#section02 .s2_text b{font-size: 2.7rem;}
 #section03 .content .text_tit{
   width: 95%;
   margin: auto;
 }
 #section03 .content h2{
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   color: #777;
   margin-bottom: .5rem;
   font-weight: 500;
@@ -368,27 +348,27 @@ main .main_text > *{opacity: 0;}
   justify-content: space-between;
 }
 #section03 .text p{
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 700;
   line-height: 3.4rem;
 }
 #section03 .text span{
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #666;
   font-weight: 400;
   margin-top: 1rem;
 }
 #section03 table{
-  width: 45rem;
+  width: 95%;
   text-align: center;
-  font-size: 1.5rem;
-  margin: 5rem auto;
+  font-size: 1.4rem;
+  margin: 3rem auto;
   border-collapse: collapse;
 }
 #section03 table th,
 #section03 table td{
-  padding: 1.5rem;
+  padding: 1.1rem;
   transform: translateY(1rem);
   border: 0.1rem solid #ddd;
 }
@@ -406,7 +386,7 @@ main .main_text > *{opacity: 0;}
   color: var(--mainColor);
 }
 #section03 table td span{
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 400;
   color: #666;
 }
@@ -420,14 +400,14 @@ main .main_text > *{opacity: 0;}
   flex: 1;
   background-color: #eee;
   border-radius: 0.5rem;
-  padding: 1.2rem;
+  padding: 1rem;
 }
 #section03 .cards .card h6{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
-#section03 .cards .card p{font-size: 1.2rem;}
+#section03 .cards .card p{font-size: 1rem;}
 #section03 .swiper-wrapper{
   margin-top: 3rem;
   cursor: grab;
@@ -443,13 +423,13 @@ main .main_text > *{opacity: 0;}
   column-gap: 1.2rem;
 }
 #section03 .swiper-slide>span{
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   background: url(../image/section03.png) no-repeat center/60% var(--mainColor);
 }
 #section03 .swiper-slide .pr_txt p{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin: 0 1rem 1rem;
 }
@@ -457,17 +437,18 @@ main .main_text > *{opacity: 0;}
   background-color: #CEDFFD;
   color: var(--mainColor);
   border-radius: 3rem;
-  padding: 0.3rem 1rem;
+  padding: 0.2rem 0.7rem;
   margin-right: 2.2rem;
 }
 #section03 .swiper-slide .pr_txt span:nth-of-type(2){
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 #section03 .swiper-slide .pr_txt span:nth-of-type(2) b{color: gold;}
 
 #section03 table tr{opacity: 0;}
 
+#section04{padding: 1rem;}
 #section04 h2 {
   font-size: 3rem;
   font-weight: 500;
@@ -475,8 +456,10 @@ main .main_text > *{opacity: 0;}
   margin-bottom: 4rem;
 }
 #section04 .accordion .title{
+  width: 100%;
+  margin: auto;
   padding: 1.8rem;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   border-bottom: 0.2rem solid var(--mainColor);
   cursor: pointer;

@@ -10,10 +10,10 @@
     top: 23%;
     font-size: 5rem;
   }
-  main .main_text p:first-child{font-size: 3rem;}
+  main .main_text p:first-child{font-size: 2.3rem;}
   main .main_text .text{font-size: 5.4rem;}
   main .main_text p:nth-of-type(3){
-    font-size: 4.5rem;
+    font-size: 4.2rem;
     font-weight: 600;
   }
   main .moMain_images{
@@ -21,6 +21,7 @@
     top: 47%;
     left: 0;
     width: 100%;
+    height: 65%;
   }
   main .moMain_images img:nth-child(2){display: none;}
   main .moMain_images img:nth-child(1){
@@ -30,43 +31,50 @@
   }
   section{margin-bottom: 15rem;}
   #section01{width: 95%;}
-  #section01 .text_left{font-size: 3rem;}
-  #section01 .text_left b{font-size: 4rem;}
-  #section01 .text_right{font-size: 5rem;}
-  #section01 .text_right b{font-size: 5.5rem;}
-  #section01 .content{flex-direction: column;}
+  #section01 .text_left{font-size: 2.5rem;}
+  #section01 .text_left b{font-size: 3.5rem;}
+  #section01 .text_right{font-size: 4rem;}
+  #section01 .text_right b{font-size: 4.5rem;}
+  #section01 .content{
+    flex-direction: row;
+    column-gap: 4rem;
+  }
   #section01 .content .caption{
-    width: 100%;
-    padding: 5rem;
-    font-size: 2.2rem;
+    flex: 1;
+    height: 35rem;
+    padding: 3rem;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 3rem;
-    overflow: hidden;
+    overflow: unset;
   }
   #section01 .content .caption p{
-    font-size: 3rem;
+    font-size: 2.6rem;
     line-height: 3.8rem;
     margin-bottom: 5rem;
   }
   #section01 .content .cap1{margin-left: -1rem;}
-  #section01 .content .cap2{margin-top: 3rem;}
+  #section01 .content .cap2{margin-top: 8rem;}
   #section01 .content .cap1:after,
   #section01 .content .cap2:after{
-    width: 45%;
-    height: 90%;
-    bottom: 0;
+    width: 13rem;
+    height: 18rem;
   }
+  
   #section01 .content .cap1:after{
-    background: url(../image/section01_3.png) no-repeat center/contain;
+    background: url(../image/section01_1.png) no-repeat center/cover;
     right: 0;
+    bottom: -7rem;
   }
   #section01 .content .cap2:after{
-    background: url(../image/section01_4.png) no-repeat center/contain;
-    right: -5rem;
+    background: url(../image/section01_2.png) no-repeat right/contain;
+    right: 0;
+    bottom: 90%;
+    width: 18rem;
   }
   #section01 .btn{
-    font-size: 2rem;
-    padding: 1rem 2.5rem;
+    font-size: 1.8rem;
+    padding: 0.8rem 2.5rem;
   }
   #section01 .cap2 .btn{border: 0.2rem solid #D6E3FF;}
 
@@ -76,10 +84,10 @@
     column-gap: 2rem;
   }
   #section02 .s2_tit{
-    width: 20rem;
-    height: 20rem;
+    width: 17rem;
+    height: 17rem;
   }
-  #section02 .s2_tit>span{font-size: 4rem;}
+  #section02 .s2_tit>span{font-size: 3.5rem;}
   #section02 .itmes{
     position: relative;
     width: 90%;
@@ -88,11 +96,11 @@
   }
   #section02 div[class*=key]{
     position: absolute;
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   #section02 div[class*=key] img{
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 4rem;
+    height: 4rem;
   }
   #section02 .key1{
     top: 0;
@@ -107,16 +115,20 @@
     right: 0;
   }
   #section02 .content{
+    height: 25%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 2rem;
     bottom: 5%;
   }
   #section02 .caption{
     flex: 1;
+    height: max-content;
     display: flex;
     flex-direction: column;
+    padding: 3rem;
   }
-  #section02 .content div:nth-child(1){padding-top: 4.5rem;}
+  #section02 .content div:nth-child(1){padding: 4.3rem 3rem;}
   #section02 .caption .dask_only{display: inline;}
   #section02 .caption .s2_btn{
     width: max-content;
@@ -148,14 +160,14 @@
     margin-top: 0;
   }
   #section03 .caption2{
+    width: 95%;
     display: flex;
-    column-gap: 3rem;
+    column-gap: 5rem;
     align-items: center;
     margin: -1rem auto 0;
-    min-width: 77rem;
   }
   #section03 .dask_only{
-    flex: 1;
+    flex: 0.7;
   }
   #section03 .dask_only .card{
     display: flex;
@@ -178,12 +190,13 @@
     background: url(../image/section03_icon3.png) no-repeat center/cover;
   }
   #section03 .dask_only .card_txt h6{
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 500;
   }
   #section03 .dask_only .card_txt p{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
+  #section03 table{flex: 1;}
   #section03 .swiper-container{
     display: flex;
     width: 100%;
@@ -197,7 +210,7 @@
     width: 360rem;
     margin-top: 0;
     cursor: pointer;
-    animation: pr_ani 30s linear infinite;
+    animation: pr_ani 60s linear infinite;
   }  
 
   #section04{width: 90%;}
@@ -237,10 +250,13 @@
     transform: translateX(-50%);
     font-size: 7rem;
   }
-  main .main_text p:first-child{font-size: 4rem;}
+  main .main_text p:first-child{font-size: 2.5rem;}
   main .main_text p:nth-child(2){
     width: max-content;
     margin-left: 6rem;
+  }
+  main .main_text p:nth-child(3){
+    font-size: 5.3rem;
   }
   main .main_text .text{
     display: inline-block;
@@ -329,8 +345,8 @@
   #section02 .menu_btn{font-size: 2rem;}
   #section02 .itmes{
     margin: 5rem 0 0;
-    width: 50%;
-    height: 60%;
+    width: 35%;
+    height: 55%;
   }
   #section02 div[class*=key]{font-size: 2.8rem;}
   #section02 div[class*=key] img{
@@ -350,19 +366,18 @@
     left: 25%;
   }
   #section02 .content{
-    width: 55rem;
-    height: 70rem;
+    width: 35%;
+    height: 60%;
     flex-direction: column;
     bottom: 5%;
-    right: 5%;
+    right: 0;
+    transform: translateX(0%);
   }
   #section02 .caption{
     display: inline-block;
-    padding: 6rem 3rem;
-  }
-  #section02 .content div:nth-child(1){
-    padding-top: 8rem;
-    padding-bottom: 5rem;
+    width: 90%;
+    height: max-content;
+    flex: 1;
   }
   #section02 .caption h3{font-size: 2.9rem;}
   #section02 .caption p{font-size: 2.5rem;}
@@ -370,6 +385,9 @@
 
   #section02 .caption .s2_btn{float: right;}
 
+  #section02 #capTab2 .s2_tit:before{
+    top: 0;
+  }
   #section02 div[class*=card]>span{
     font-size: 3.5rem;
     width: 5rem;
@@ -379,8 +397,8 @@
   #section02 div[class*=card] img{
     position: relative;
     margin-top: -8rem;
-    width: 23rem;
-    height: 23rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 50%;
     border: .3rem solid #fff;
   }
@@ -396,7 +414,7 @@
     left: 10%;
   }
   #section02 .card2{
-    bottom: 25%;
+    bottom: 5%;
     left: 13%;
   }
   #section02 .card3{
@@ -407,14 +425,17 @@
     bottom: 45%;
     right: 20%;
   }
-  #section02 .cards{width: 85%;}
+  #section02 .cards{
+    width: 85%;
+    height: 35%;
+  }
   #section02 .s2_text{
     position: absolute;
     bottom: 5%;
     right: 10%;
-    font-size: 4.5rem;
+    font-size: 3.8rem;
   }
-  #section02 .s2_text b{font-size: 5rem;}
+  #section02 .s2_text b{font-size: 4rem;}
 
   #section03 .content .text_tit{width: 100%;}
   #section03 .content h2{font-size: 3.5rem;}

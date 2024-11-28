@@ -123,7 +123,7 @@ $(document).ready(function(){
     $(this).siblings().find(".item").removeClass("active");
   });
 
-  if($(window).width() > 600) {
+  if($(window).width() > 760) {
     let colneElement = $("#section03 .swiper-wrapper").clone(true);
     $(colneElement).appendTo("#section03 .swiper-container");
   } 
@@ -137,21 +137,13 @@ $(document).ready(function(){
     $(this).next().stop().slideToggle();
   });
 
-  $(window).resize(function () {
-    document.location.reload();
+  lastWidth = window.innerWidth;
+  $(window).resize(function(){
+  if(window.innerWidth != lastWidth){
+    location.reload();
+    scrollTrigger.refresh();
+  }
+  lastWidth = window.innerWidth;
   });
 
-  var delay = 300;
-  var timer = null;
-  $(window).on('resize', function () {
-    clearTimeout(timer);
-    timer = setTimeout(function () {
-      document.location.reload();
-    }, delay);
-  });
-  
-  });
-
-
-
-
+});
